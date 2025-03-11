@@ -1,0 +1,806 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "the-application-works-only-with-the-sepolia-network;the-user-accesses-the-page-with-metamask-connected-to-sepolia-network",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "The user accesses the page with Metamask connected to Sepolia network",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "A user with metamask installed connected to sepolia network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1637834,
+              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the user accepts notifications",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:9"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the page shows the account address",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:60"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the page shows the input address field",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:62"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the page doesn't show a network error message",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:64"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "the-application-works-only-with-the-sepolia-network;the-user-accesses-the-page-with-metamask-connected-to-mainnet-network",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "The user accesses the page with Metamask connected to Mainnet network",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "A user with metamask installed connected to mainnet network",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the page shows a network error message",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:66"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the page shows the switch network button",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:68"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the page doesn't show the input address field",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "the-application-works-only-with-the-sepolia-network;the-user-accesses-the-page-with-metamask-connected-to-mainnet-network-and-uses-the-switch-network-button",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "The user accesses the page with Metamask connected to Mainnet network and uses the switch network button",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "A user with metamask installed connected to mainnet network",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the user clicks the switch network button",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:48"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "the user confirms the switch network",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:53"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "the page shows the input address field",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:62"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "the page doesn't show a network error message",
+            "match": {
+              "location": "e2e/steps/01-app-access.step.ts:64"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "the-application-works-only-with-the-sepolia-network",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "The application works only with the Sepolia network",
+    "tags": [],
+    "uri": "e2e/features/01-app-access.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "search-erc20-tokens;the-user-can-search-for-an-existing-erc20-token-and-see-his-balance-and-deposit-history-for-the-selected-token.",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "The user can search for an existing ERC20 token and see his balance and deposit history for the selected token.",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "A user with metamask installed connected to sepolia network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 217041,
+              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the user enters the address 0x9982f9A3bA28c34aD03737745d956EC0668ea440 in the input address field",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user clicks the Submit button",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:63"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the page shows the address balance for the selected token",
+            "match": {
+              "location": "e2e/steps/02-search-erc20-token.step.ts:3"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the page shows the table of the deposit history for the selected token",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "search-erc20-tokens;the-user-enter-an-invalid-erc20-token-address",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "The user enter an invalid ERC20 token address",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "A user with metamask installed connected to sepolia network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 135874,
+              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user enters the address 0x9982f9A3bA28c in the input address field",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the submit button is disabled",
+            "match": {
+              "location": "e2e/steps/02-search-erc20-token.step.ts:13"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "search-erc20-tokens;the-user-clicks-the-example-token-link-and-he-will-be-able-to-see-his-balance-and-deposit-history.",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "The user clicks the example token link and he will be able to see his balance and deposit history.",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "A user with metamask installed connected to sepolia network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 122874,
+              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the user clicks the example token link",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:68"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "the page shows the address balance for the selected token",
+            "match": {
+              "location": "e2e/steps/02-search-erc20-token.step.ts:3"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "the page shows the table of the deposit history for the selected token",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "search-erc20-tokens",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Search ERC20 tokens",
+    "tags": [],
+    "uri": "e2e/features/02-search-erc20-token.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "deposit-erc20-tokens;the-user-try-to-deposit-a-erc20-token-with-an-empty-balance",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "The user try to deposit a ERC20 token with an empty balance",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "A user with metamask installed connected to sepolia network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 169957,
+              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the user enters the address 0xCD85B9a767eF2277E264A4B9A14a2deACAB82FfB in the input address field",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the user clicks the Submit button",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:63"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the page shows the token balance 0",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the deposit input shows an error",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:20"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the deposit button is not visible",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:22"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "deposit-erc20-tokens;the-user-mint-example-token-using-the-web-application",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "The user mint example token using the web application",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "A user with metamask installed connected to sepolia network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 148999,
+              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the user clicks the example token link",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:68"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the user clicks the Get more tokens link",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:3"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the user accepts the transaction",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:5"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the deposit button is visible",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:7"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "deposit-erc20-tokens;the-user-deposit-example-token",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "The user deposit example token",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "A user with metamask installed connected to sepolia network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 134709,
+              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "the user accesses the app page",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "the user clicks the example token link",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:68"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "the deposit button is visible",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:7"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "the user enter the max amount of tokens in the amount field",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "the user clicks the deposit button",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:14"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the user approve the deposit",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:16"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the page shows the token balance 0",
+            "match": {
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "deposit-erc20-tokens",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Deposit ERC20 tokens",
+    "tags": [],
+    "uri": "e2e/features/03-deposit-erc20-token.feature"
+  }
+]
