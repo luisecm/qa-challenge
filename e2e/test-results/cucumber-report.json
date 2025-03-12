@@ -15,12 +15,12 @@
             "line": 4,
             "name": "A user with metamask installed connected to sepolia network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 5002503041,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+              "duration": 15004763417,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -29,7 +29,7 @@
             "line": 5,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -105,12 +105,12 @@
             "line": 12,
             "name": "A user with metamask installed connected to mainnet network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 36179624,
-              "error_message": "Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/ld/7ldp96r564s2t2ylpd1b1_r80000gn/T/dappwright/session/metamask/0/Default'\n    at Object.rmdirSync (node:fs:1219:10)\n    at _rmdirSync (node:internal/fs/rimraf:260:21)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at node:internal/fs/rimraf:253:9\n    at _rmdirSync (node:internal/fs/rimraf:250:7)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at Object.rmSync (node:fs:1268:10)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@tenkeylabs/dappwright/src/launch.ts:33:6"
+              "duration": 15002677708,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -119,7 +119,7 @@
             "line": 13,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -182,12 +182,12 @@
             "line": 19,
             "name": "A user with metamask installed connected to mainnet network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 5001631959,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+              "duration": 15001732708,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -196,7 +196,7 @@
             "line": 20,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -283,12 +283,12 @@
             "line": 4,
             "name": "A user with metamask installed connected to sepolia network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 44474666,
-              "error_message": "Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/ld/7ldp96r564s2t2ylpd1b1_r80000gn/T/dappwright/session/metamask/0/Default'\n    at Object.rmdirSync (node:fs:1219:10)\n    at _rmdirSync (node:internal/fs/rimraf:260:21)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at node:internal/fs/rimraf:253:9\n    at _rmdirSync (node:internal/fs/rimraf:250:7)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at Object.rmSync (node:fs:1268:10)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@tenkeylabs/dappwright/src/launch.ts:33:6"
+              "duration": 15001523292,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -297,7 +297,7 @@
             "line": 5,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -320,7 +320,7 @@
             "line": 7,
             "name": "the user clicks the Submit button",
             "match": {
-              "location": "e2e/steps/shared.step.ts:63"
+              "location": "e2e/steps/shared.step.ts:69"
             },
             "result": {
               "status": "skipped",
@@ -370,12 +370,12 @@
             "line": 12,
             "name": "A user with metamask installed connected to sepolia network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 5000772415,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+              "duration": 15003035916,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -384,7 +384,7 @@
             "line": 13,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -431,12 +431,12 @@
             "line": 18,
             "name": "A user with metamask installed connected to sepolia network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 39721040,
-              "error_message": "Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/ld/7ldp96r564s2t2ylpd1b1_r80000gn/T/dappwright/session/metamask/0/Default'\n    at Object.rmdirSync (node:fs:1219:10)\n    at _rmdirSync (node:internal/fs/rimraf:260:21)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at node:internal/fs/rimraf:253:9\n    at _rmdirSync (node:internal/fs/rimraf:250:7)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at Object.rmSync (node:fs:1268:10)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@tenkeylabs/dappwright/src/launch.ts:33:6"
+              "duration": 15003055875,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -445,7 +445,7 @@
             "line": 19,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -458,7 +458,7 @@
             "line": 20,
             "name": "the user clicks the example token link",
             "match": {
-              "location": "e2e/steps/shared.step.ts:68"
+              "location": "e2e/steps/shared.step.ts:74"
             },
             "result": {
               "status": "skipped",
@@ -519,12 +519,12 @@
             "line": 4,
             "name": "A user with metamask installed connected to sepolia network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 5001280874,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+              "duration": 15002450667,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -533,7 +533,7 @@
             "line": 5,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -556,7 +556,7 @@
             "line": 7,
             "name": "the user clicks the Submit button",
             "match": {
-              "location": "e2e/steps/shared.step.ts:63"
+              "location": "e2e/steps/shared.step.ts:69"
             },
             "result": {
               "status": "skipped",
@@ -616,12 +616,12 @@
             "line": 13,
             "name": "A user with metamask installed connected to sepolia network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 48415874,
-              "error_message": "Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/ld/7ldp96r564s2t2ylpd1b1_r80000gn/T/dappwright/session/metamask/0/Default'\n    at Object.rmdirSync (node:fs:1219:10)\n    at _rmdirSync (node:internal/fs/rimraf:260:21)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at node:internal/fs/rimraf:253:9\n    at _rmdirSync (node:internal/fs/rimraf:250:7)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at Object.rmSync (node:fs:1268:10)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@tenkeylabs/dappwright/src/launch.ts:33:6"
+              "duration": 15003509875,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -630,7 +630,7 @@
             "line": 14,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -643,7 +643,7 @@
             "line": 15,
             "name": "the user clicks the example token link",
             "match": {
-              "location": "e2e/steps/shared.step.ts:68"
+              "location": "e2e/steps/shared.step.ts:74"
             },
             "result": {
               "status": "skipped",
@@ -706,12 +706,12 @@
             "line": 21,
             "name": "A user with metamask installed connected to sepolia network",
             "match": {
-              "location": "e2e/steps/shared.step.ts:13"
+              "location": "e2e/steps/shared.step.ts:18"
             },
             "result": {
               "status": "failed",
-              "duration": 5000842375,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+              "duration": 15002724125,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -720,7 +720,7 @@
             "line": 22,
             "name": "the user accesses the app page",
             "match": {
-              "location": "e2e/steps/shared.step.ts:50"
+              "location": "e2e/steps/shared.step.ts:56"
             },
             "result": {
               "status": "skipped",
@@ -733,7 +733,7 @@
             "line": 23,
             "name": "the user clicks the example token link",
             "match": {
-              "location": "e2e/steps/shared.step.ts:68"
+              "location": "e2e/steps/shared.step.ts:74"
             },
             "result": {
               "status": "skipped",

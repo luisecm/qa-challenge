@@ -1,17 +1,23 @@
 import { Given, When } from "@cucumber/cucumber";
 import MainPage from "../pages/main.page";
-import { BrowserContext, Page, test as baseTest } from "@playwright/test";
-import { launch, MetaMaskWallet } from "@tenkeylabs/dappwright";
+import {
+  BrowserContext,
+  Page,
+  test as baseTest,
+  expect,
+} from "@playwright/test";
+import { bootstrap, MetaMaskWallet } from "@tenkeylabs/dappwright";
 import dotenv from "dotenv";
 dotenv.config();
 
 let context: BrowserContext;
 let metamask: MetaMaskWallet;
-let page: Page;
 let mainPage: MainPage;
+let page: Page;
 
 Given(
   /^A user with metamask installed connected to (sepolia|mainnet) network$/,
+  { timeout: 5000 * 3 },
   async function (network) {
     const allowedNetworks = ["sepolia", "mainnet"];
     if (!allowedNetworks.includes(network)) {
@@ -26,28 +32,28 @@ Given(
     }
 
     // Start MetaMask and Launch Browser
-    const { wallet, browserContext } = await launch("chromium", {
+    const [wallet, _, context] = await bootstrap("", {
       wallet: "metamask",
-      version: "12.8.1",
-      headless: false,
-    });
-
-    metamask = wallet as MetaMaskWallet;
-    context = browserContext;
-    page = context.pages()[0];
-
-    await metamask.setup({
+      version: MetaMaskWallet.recommendedVersion,
       seed: process.env.SEED_PHRASE,
+      headless: false,
+      showTestNets: true,
     });
+
+    page = context.pages()[0];
 
     // By default Ethereum Mainnet is selected
     if (network === "sepolia") {
-      await metamask.switchNetwork("sepolia");
+      await wallet.switchNetwork("Sepolia");
+      const selectedNetwork = wallet.page
+        .getByTestId("network-display")
+        .getByText("Sepolia");
+      expect(selectedNetwork).toBeVisible();
     }
   }
 );
 
-When(/^the user accesses the app page$/, async function () {
+When(/^the user accesses the app page$/, async function (page: Page) {
   await page.goto("/");
 });
 

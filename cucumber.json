@@ -3,11 +3,10 @@
     "formatOptions": {
       "snippetInterface": "async-await"
     },
-    "paths": ["**/e2e/features/**/*.feature"],
-    "require": ["**/e2e/steps/*.step.ts"],
+    "paths": ["e2e/features/**/*.feature"],
+    "require": ["e2e/steps/**/*.ts"],
     "requireModule": ["ts-node/register"],
     "dryRun": false,
-    "timeout": 30000,
     "format": [
       "progress-bar",
       "html:e2e/test-results/cucumber-report.html",
