@@ -1,6 +1,6 @@
 import { When, Then } from "@cucumber/cucumber";
 import MainPage from "../pages/main.page";
-import { context, page, metamask } from "./shared.step";
+import { page } from "./shared.step";
 import MetamaskPage from "../pages/metamask.page";
 
 let metamaskPage: MetamaskPage;
@@ -57,17 +57,38 @@ When(/^the user confirms the switch network$/, async function () {
   await mainPage.validateAlertIsVisible();
 });
 
-Then(/^the page shows the account address$/, async function () {});
+Then(/^the page shows the account address$/, async function () {
+  mainPage = new MainPage(page);
+  const expectedWalletAddress = mainPage.getWalletAddress();
+  await mainPage.reloadPage();
+  const displayedAddress = mainPage.getConnectedAddress();
+  await mainPage.validateWalletIsConnected({
+    metamaskAddress: await expectedWalletAddress,
+    appAddress: await displayedAddress,
+  });
+});
 
-Then(/^the page shows the input address field$/, async function () {});
+Then(/^the page shows the input address field$/, async function () {
+  mainPage = new MainPage(page);
+  await mainPage.validateInputAddressIsVisible();
+});
 
-Then(/^the page doesn't show a network error message$/, async function () {});
+Then(/^the page doesn't show a network error message$/, async function () {
+  mainPage = new MainPage(page);
+  await mainPage.validateNetworkErrorIsNotShown();
+});
 
-Then(/^the page shows a network error message$/, async function () {});
+Then(/^the page shows a network error message$/, async function () {
+  mainPage = new MainPage(page);
+  await mainPage.validateNetworkErrorIsShown();
+});
 
 Then(/^the page shows the switch network button$/, async function () {
   mainPage = new MainPage(page);
   await mainPage.validateSwitchNetworkIsVisible();
 });
 
-Then(/^the page doesn't show the input address field$/, async function () {});
+Then(/^the page doesn't show the input address field$/, async function () {
+  mainPage = new MainPage(page);
+  await mainPage.validateInputAddressFieldIsNotShown();
+});

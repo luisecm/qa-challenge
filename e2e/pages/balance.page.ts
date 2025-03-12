@@ -1,19 +1,24 @@
-import { Page, Locator } from "@playwright/test";
+import { Page, Locator, expect } from "@playwright/test";
 
 export default class BalancePage {
   private page: Page;
-  private selectedTokenInfo: Locator;
   private balanceInfo: Locator;
-  private depositHistory: Locator;
-  private tokenBalance: Locator;
-  private depositErrorMessage: Locator;
-  private depositButton: Locator;
+  private buttonInputAddressSubmit: Locator;
   private depositAmountField: Locator;
+  private depositButton: Locator;
+  private depositErrorMessage: Locator;
+  private depositHistory: Locator;
+  private selectedTokenInfo: Locator;
+  private tokenBalance: Locator;
+
   private mintTokensButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.balanceInfo = this.page.getByTestId("TokenBalance__Div__balanceInfo");
+    this.buttonInputAddressSubmit = this.page.getByTestId(
+      "InputAddress__Button__submit"
+    );
     this.depositAmountField = this.page.getByTestId(
       "DepositToken__Input__depositAmount"
     );
@@ -31,6 +36,21 @@ export default class BalancePage {
     this.tokenBalance = this.page.getByTestId(
       "TokenBalance__Div__balanceAmount"
     );
+  }
+
+  async clickOnDepositButton() {
+    await this.depositButton.click();
+  }
+
+  async clickOnMintTokens() {
+    await this.mintTokensButton.click();
+  }
+
+  async enterMaxAmoutnOfTokens() {
+    await this.tokenBalance.waitFor({ state: "visible" });
+    const balance = await this.tokenBalance.innerText();
+    await this.depositAmountField.waitFor({ state: "visible" });
+    await this.depositAmountField.fill(balance);
   }
 
   async fetchSelectedTokenAddress() {
@@ -68,5 +88,45 @@ export default class BalancePage {
 
   async requestTokenMinting() {
     await this.mintTokensButton.click();
+  }
+
+  async validateAddressBalanceIsShown() {
+    await expect(this.balanceInfo).toBeVisible();
+  }
+
+  async validateDepositButtonIsNotVisible() {
+    await expect(this.depositButton).not.toBeVisible();
+  }
+
+  async validateDepositButtonIsVisible() {
+    await expect(this.depositButton).toBeVisible();
+  }
+
+  async validateDepositErrorIsShown() {
+    await expect(this.depositErrorMessage).toBeVisible();
+  }
+
+  async validateSubmitButtonIsDisabled() {
+    await expect(this.buttonInputAddressSubmit).toBeDisabled();
+  }
+
+  async validateTableDepositHistory() {
+    // Ensure the table is visible before proceeding
+    await this.depositHistory.waitFor({
+      state: "visible",
+    });
+
+    // Count the number of rows in the table
+    const totalRows = await this.depositHistory.locator("tr").count();
+
+    // Verify that at least one entry exists in the table
+    expect(totalRows).toBeGreaterThan(0);
+  }
+
+  async validateTokenBalance(expectedBalance: string) {
+    await expect(this.tokenBalance).toBeVisible();
+
+    let actualBalance = await this.tokenBalance.textContent();
+    expect(actualBalance?.trim()).toEqual(expectedBalance);
   }
 }

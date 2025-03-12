@@ -1,7 +1,8 @@
-import { type Page, type Locator, expect } from "@playwright/test";
+import { type Page, type Locator } from "@playwright/test";
 
 export default class MetamaskPage {
   readonly page: Page;
+  readonly accountOverviewActivityTab: Locator;
   readonly buttonConfirm: Locator;
   readonly buttonConfirmSwitch: Locator;
   readonly buttonDismiss: Locator;
@@ -11,6 +12,9 @@ export default class MetamaskPage {
 
   constructor(page: Page) {
     this.page = page;
+    this.accountOverviewActivityTab = this.page.getByTestId(
+      "account-overview__activity-tab"
+    );
     this.buttonConfirm = this.page.locator("[data-testid='confirm-btn']");
     this.buttonConfirmSwitch = this.page.locator("button:has-text('Confirm')");
     this.buttonDismiss = this.page.locator(
