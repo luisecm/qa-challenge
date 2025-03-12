@@ -5,6 +5,7 @@ export default class MainPage {
   readonly connectedAddress: Locator;
   readonly alertConnectorError: Locator;
   readonly buttonConnect: Locator;
+  readonly inputAddress: Locator;
   readonly inputFormAddress: Locator;
   readonly inputAddressValue: Locator;
   readonly buttonSubmit: Locator;
@@ -25,7 +26,9 @@ export default class MainPage {
     this.connectedAddress = this.page.getByTestId(
       "MetaMaskConnector__Div__connect"
     );
-
+    this.inputAddress = this.page.getByTestId(
+      "InputAddress__Input__addressValue"
+    );
     this.inputAddressValue = this.page.getByTestId(
       "inputAddressValue__Input__addressValue"
     );
@@ -61,6 +64,23 @@ export default class MainPage {
     return extractedAddress;
   }
 
+  async getConnectedAddress() {
+    const displayedAddress = (await this.connectedAddress.innerText())
+      .replace("Connected as: ", "")
+      .trim();
+    return displayedAddress as string;
+  }
+
+  async getWalletAddress() {
+    const expectedWalletAddress = await this.page.evaluate(async () => {
+      const accounts = await (window as any).ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      return accounts[0];
+    });
+    return expectedWalletAddress as string;
+  }
+
   async fetchConnectButtonLabel() {
     const buttonLabel = await this.buttonConnect.textContent();
     return buttonLabel;
@@ -88,6 +108,22 @@ export default class MainPage {
     }
 
     await expect.soft(this.buttonSubmit).toBeDisabled();
+  }
+
+  async validateInputAddressFieldIsNotShown() {
+    await expect(this.inputAddressValue).not.toBeVisible();
+  }
+
+  async validateInputAddressIsVisible() {
+    await this.inputAddress.waitFor({ state: "visible" });
+  }
+
+  async validateNetworkErrorIsNotShown() {
+    await expect(this.alertConnectorError).not.toBeVisible();
+  }
+
+  async validateNetworkErrorIsShown() {
+    await expect(this.alertConnectorError).toBeVisible();
   }
 
   async validateSwitchNetworkIsVisible() {
