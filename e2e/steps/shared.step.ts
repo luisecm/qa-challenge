@@ -11,9 +11,9 @@ let page: Page;
 let mainPage: MainPage;
 
 Given(
-  /^A user with metamask installed connected to (sepolia|Mainnet) network$/,
+  /^A user with metamask installed connected to (sepolia|mainnet) network$/,
   async function (network) {
-    const allowedNetworks = ["sepolia", "Mainnet"];
+    const allowedNetworks = ["sepolia", "mainnet"];
     if (!allowedNetworks.includes(network)) {
       throw new Error(
         `Invalid network: ${network}. Allowed networks: ${allowedNetworks.join(

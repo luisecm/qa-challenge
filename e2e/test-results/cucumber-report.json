@@ -19,8 +19,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1637834,
-              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+              "duration": 5002503041,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -68,7 +68,7 @@
             "line": 8,
             "name": "the page shows the input address field",
             "match": {
-              "location": "e2e/steps/01-app-access.step.ts:62"
+              "location": "e2e/steps/01-app-access.step.ts:71"
             },
             "result": {
               "status": "skipped",
@@ -81,7 +81,7 @@
             "line": 9,
             "name": "the page doesn't show a network error message",
             "match": {
-              "location": "e2e/steps/01-app-access.step.ts:64"
+              "location": "e2e/steps/01-app-access.step.ts:76"
             },
             "result": {
               "status": "skipped",
@@ -104,9 +104,13 @@
             "keyword": "Given ",
             "line": 12,
             "name": "A user with metamask installed connected to mainnet network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "failed",
+              "duration": 36179624,
+              "error_message": "Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/ld/7ldp96r564s2t2ylpd1b1_r80000gn/T/dappwright/session/metamask/0/Default'\n    at Object.rmdirSync (node:fs:1219:10)\n    at _rmdirSync (node:internal/fs/rimraf:260:21)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at node:internal/fs/rimraf:253:9\n    at _rmdirSync (node:internal/fs/rimraf:250:7)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at Object.rmSync (node:fs:1268:10)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@tenkeylabs/dappwright/src/launch.ts:33:6"
             }
           },
           {
@@ -128,7 +132,7 @@
             "line": 14,
             "name": "the page shows a network error message",
             "match": {
-              "location": "e2e/steps/01-app-access.step.ts:66"
+              "location": "e2e/steps/01-app-access.step.ts:81"
             },
             "result": {
               "status": "skipped",
@@ -141,7 +145,7 @@
             "line": 15,
             "name": "the page shows the switch network button",
             "match": {
-              "location": "e2e/steps/01-app-access.step.ts:68"
+              "location": "e2e/steps/01-app-access.step.ts:86"
             },
             "result": {
               "status": "skipped",
@@ -154,7 +158,7 @@
             "line": 16,
             "name": "the page doesn't show the input address field",
             "match": {
-              "location": "e2e/steps/01-app-access.step.ts:73"
+              "location": "e2e/steps/01-app-access.step.ts:91"
             },
             "result": {
               "status": "skipped",
@@ -177,9 +181,13 @@
             "keyword": "Given ",
             "line": 19,
             "name": "A user with metamask installed connected to mainnet network",
+            "match": {
+              "location": "e2e/steps/shared.step.ts:13"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "failed",
+              "duration": 5001631959,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -227,7 +235,7 @@
             "line": 23,
             "name": "the page shows the input address field",
             "match": {
-              "location": "e2e/steps/01-app-access.step.ts:62"
+              "location": "e2e/steps/01-app-access.step.ts:71"
             },
             "result": {
               "status": "skipped",
@@ -240,7 +248,7 @@
             "line": 24,
             "name": "the page doesn't show a network error message",
             "match": {
-              "location": "e2e/steps/01-app-access.step.ts:64"
+              "location": "e2e/steps/01-app-access.step.ts:76"
             },
             "result": {
               "status": "skipped",
@@ -279,8 +287,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 217041,
-              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+              "duration": 44474666,
+              "error_message": "Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/ld/7ldp96r564s2t2ylpd1b1_r80000gn/T/dappwright/session/metamask/0/Default'\n    at Object.rmdirSync (node:fs:1219:10)\n    at _rmdirSync (node:internal/fs/rimraf:260:21)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at node:internal/fs/rimraf:253:9\n    at _rmdirSync (node:internal/fs/rimraf:250:7)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at Object.rmSync (node:fs:1268:10)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@tenkeylabs/dappwright/src/launch.ts:33:6"
             }
           },
           {
@@ -325,7 +333,7 @@
             "line": 8,
             "name": "the page shows the address balance for the selected token",
             "match": {
-              "location": "e2e/steps/02-search-erc20-token.step.ts:3"
+              "location": "e2e/steps/02-search-erc20-token.step.ts:7"
             },
             "result": {
               "status": "skipped",
@@ -337,8 +345,11 @@
             "keyword": "And ",
             "line": 9,
             "name": "the page shows the table of the deposit history for the selected token",
+            "match": {
+              "location": "e2e/steps/02-search-erc20-token.step.ts:15"
+            },
             "result": {
-              "status": "ambiguous",
+              "status": "skipped",
               "duration": 0
             }
           }
@@ -363,8 +374,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 135874,
-              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+              "duration": 5000772415,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -396,7 +407,7 @@
             "line": 15,
             "name": "the submit button is disabled",
             "match": {
-              "location": "e2e/steps/02-search-erc20-token.step.ts:13"
+              "location": "e2e/steps/02-search-erc20-token.step.ts:23"
             },
             "result": {
               "status": "skipped",
@@ -424,8 +435,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 122874,
-              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+              "duration": 39721040,
+              "error_message": "Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/ld/7ldp96r564s2t2ylpd1b1_r80000gn/T/dappwright/session/metamask/0/Default'\n    at Object.rmdirSync (node:fs:1219:10)\n    at _rmdirSync (node:internal/fs/rimraf:260:21)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at node:internal/fs/rimraf:253:9\n    at _rmdirSync (node:internal/fs/rimraf:250:7)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at Object.rmSync (node:fs:1268:10)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@tenkeylabs/dappwright/src/launch.ts:33:6"
             }
           },
           {
@@ -460,7 +471,7 @@
             "line": 21,
             "name": "the page shows the address balance for the selected token",
             "match": {
-              "location": "e2e/steps/02-search-erc20-token.step.ts:3"
+              "location": "e2e/steps/02-search-erc20-token.step.ts:7"
             },
             "result": {
               "status": "skipped",
@@ -472,8 +483,11 @@
             "keyword": "And ",
             "line": 22,
             "name": "the page shows the table of the deposit history for the selected token",
+            "match": {
+              "location": "e2e/steps/02-search-erc20-token.step.ts:15"
+            },
             "result": {
-              "status": "ambiguous",
+              "status": "skipped",
               "duration": 0
             }
           }
@@ -509,8 +523,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 169957,
-              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+              "duration": 5001280874,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -554,11 +568,8 @@
             "keyword": "Then ",
             "line": 8,
             "name": "the page shows the token balance 0",
-            "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:18"
-            },
             "result": {
-              "status": "skipped",
+              "status": "undefined",
               "duration": 0
             }
           },
@@ -568,7 +579,7 @@
             "line": 9,
             "name": "the deposit input shows an error",
             "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:20"
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:100"
             },
             "result": {
               "status": "skipped",
@@ -581,7 +592,7 @@
             "line": 10,
             "name": "the deposit button is not visible",
             "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:22"
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:105"
             },
             "result": {
               "status": "skipped",
@@ -609,8 +620,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 148999,
-              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+              "duration": 48415874,
+              "error_message": "Error: ENOTEMPTY: directory not empty, rmdir '/var/folders/ld/7ldp96r564s2t2ylpd1b1_r80000gn/T/dappwright/session/metamask/0/Default'\n    at Object.rmdirSync (node:fs:1219:10)\n    at _rmdirSync (node:internal/fs/rimraf:260:21)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at node:internal/fs/rimraf:253:9\n    at _rmdirSync (node:internal/fs/rimraf:250:7)\n    at rimrafSync (node:internal/fs/rimraf:193:7)\n    at Object.rmSync (node:fs:1268:10)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@tenkeylabs/dappwright/src/launch.ts:33:6"
             }
           },
           {
@@ -645,7 +656,7 @@
             "line": 16,
             "name": "the user clicks the Get more tokens link",
             "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:3"
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:7"
             },
             "result": {
               "status": "skipped",
@@ -658,7 +669,7 @@
             "line": 17,
             "name": "the user accepts the transaction",
             "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:5"
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:12"
             },
             "result": {
               "status": "skipped",
@@ -671,7 +682,7 @@
             "line": 18,
             "name": "the deposit button is visible",
             "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:7"
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:16"
             },
             "result": {
               "status": "skipped",
@@ -699,8 +710,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 134709,
-              "error_message": "Error: SEED_PHRASE is missing in .env.local\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:25:13)\n    at step (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:33:23)\n    at Object.next (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:14:53)\n    at /Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:8:71\n    at __awaiter (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:4:12)\n    at World.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/e2e/steps/shared.step.ts:53:12)"
+              "duration": 5000842375,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/luisecm/Projects/librecapital/mine/forked/qa-challenge/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
             }
           },
           {
@@ -735,7 +746,7 @@
             "line": 24,
             "name": "the deposit button is visible",
             "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:7"
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:16"
             },
             "result": {
               "status": "skipped",
@@ -758,7 +769,7 @@
             "line": 26,
             "name": "the user clicks the deposit button",
             "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:14"
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:29"
             },
             "result": {
               "status": "skipped",
@@ -771,7 +782,7 @@
             "line": 27,
             "name": "the user approve the deposit",
             "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:16"
+              "location": "e2e/steps/03-deposit-erc20-token.step.ts:34"
             },
             "result": {
               "status": "skipped",
@@ -783,11 +794,8 @@
             "keyword": "Then ",
             "line": 28,
             "name": "the page shows the token balance 0",
-            "match": {
-              "location": "e2e/steps/03-deposit-erc20-token.step.ts:18"
-            },
             "result": {
-              "status": "skipped",
+              "status": "undefined",
               "duration": 0
             }
           }

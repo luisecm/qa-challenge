@@ -82,17 +82,18 @@ When(/^the user approve the deposit$/, async function () {
 
   await transactionRow.click();
 
-  await metamaskPage.waitForSelector('[data-testid="confirm-footer-button"]', {
-    timeout: 15000,
-  });
+  await metamaskPage.waitForSelector(
+    '[data-testid="confirm-footer-button"]',
+    {}
+  );
   await metamaskPage.click('[data-testid="confirm-footer-button"]');
 });
 
 Then(
-  /^the page shows the token balance {string}$/,
-  async function (expectedBalance: string) {
+  /^the page shows the token balance {number}$/,
+  async function (expectedBalance: Number) {
     balancePage = new BalancePage(page);
-    await balancePage.validateTokenBalance(expectedBalance);
+    await balancePage.validateTokenBalance(expectedBalance.toString());
   }
 );
 
