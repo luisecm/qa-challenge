@@ -2,6 +2,7 @@ import { When, Then } from "@cucumber/cucumber";
 import MainPage from "../pages/main.page";
 import { page } from "./shared.step";
 import MetamaskPage from "../pages/metamask.page";
+import { Page } from "@playwright/test";
 
 let metamaskPage: MetamaskPage;
 let mainPage: MainPage;
@@ -10,7 +11,7 @@ When(/^the user accepts notifications$/, async function ({}) {
   // Find the MetaMask popup window
   const metamaskContext = this.context
     .pages()
-    .find(() => page.url().includes("chrome-extension://"));
+    .find((p: any) => p.url().includes("chrome-extension://"));
 
   if (!metamaskContext) {
     throw new Error("MetaMask extension window was not detected.");
@@ -51,9 +52,26 @@ When(/^the user clicks the switch network button$/, async function () {
 });
 
 When(/^the user confirms the switch network$/, async function () {
-  mainPage = new MainPage(page);
-  metamaskPage = new MetamaskPage(page);
+  // First find the MetaMask popup window
+  const pages = this.context.pages();
+  const metamaskPopup = pages.find(
+    (p: Page) => p.url().includes("chrome-extension") && p !== page
+  );
+
+  if (!metamaskPopup) {
+    throw new Error("MetaMask popup not found");
+  }
+
+  // Create MetaMask page instance for the popup
+  metamaskPage = new MetamaskPage(metamaskPopup);
+
+  // Confirm the network switch
+  await metamaskPopup.bringToFront();
   await metamaskPage.confirmSwitchNetwork();
+
+  // Switch back to the main page
+  await page.bringToFront();
+  mainPage = new MainPage(page);
   await mainPage.validateAlertIsVisible();
 });
 

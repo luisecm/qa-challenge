@@ -19,7 +19,7 @@ When(/^the deposit button is visible$/, async function () {
 });
 
 When(
-  /^the user enters the max amount of tokens in the amount field$/,
+  /^And the user enters the max amount of tokens in the amount field$/,
   async function () {
     balancePage = new BalancePage(page);
     await balancePage.enterMaxAmoutnOfTokens();
@@ -90,10 +90,10 @@ When(/^the user approve the deposit$/, async function () {
 });
 
 Then(
-  /^the page shows the token balance {number}$/,
-  async function (expectedBalance: Number) {
+  "the page shows the token balance {string}",
+  async function (expectedBalance: string) {
     balancePage = new BalancePage(page);
-    await balancePage.validateTokenBalance(expectedBalance.toString());
+    await balancePage.validateTokenBalance(expectedBalance);
   }
 );
 
