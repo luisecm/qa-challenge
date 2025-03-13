@@ -11,9 +11,9 @@ let mainPage: MainPage;
 let page: Page;
 
 Given(
-  "A user with metamask installed connected to (sepolia|mainnet) network",
+  "A user with metamask installed connected to {string} network",
   { timeout: 30000 },
-  async (network: string) => {
+  async (network) => {
     const [Dappwright, pageCreated, browserContext] = await bootstrap(
       "chrome",
       {
