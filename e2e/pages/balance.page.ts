@@ -102,8 +102,9 @@ export default class BalancePage {
     await expect(this.depositButton).toBeVisible();
   }
 
-  async validateDepositErrorIsShown() {
+  async validateDepositErrorIsShown(error: string) {
     await expect(this.depositErrorMessage).toBeVisible();
+    await expect(this.depositErrorMessage).toContainText(error);
   }
 
   async validateSubmitButtonIsDisabled() {

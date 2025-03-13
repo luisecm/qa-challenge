@@ -1,10 +1,10 @@
 # QA Automation Framework for dApp Testing
 
-## 📌 Overview
+## Overview
 
 This repository contains an automated test suite for a decentralized application from Libre Capital QA Challenge using **Dappwright**, **Playwright**, and **Cucumber.js**. The tests cover wallet connections, ERC20 token interactions, and deposits on the Sepolia testnet.
 
-## 🚀 Features
+## Features
 
 - **Cucumber BDD Tests** – Step definitions using Gherkin syntax
 - **Dappwright Integration** – Automated MetaMask interactions
@@ -12,7 +12,7 @@ This repository contains an automated test suite for a decentralized application
 - **GitHub Actions CI/CD Pipeline** – Automated test execution
 - **dApp Interaction** – ERC20 token search, deposits, and wallet management
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 root/
@@ -44,15 +44,15 @@ root/
   ├── README.md            # Instruction on how to run tests
 ```
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
-### 1️⃣ Install Dependencies
+### 1. Install Dependencies
 
 ```sh
 npm install
 ```
 
-### 2️⃣ Set Up Environment Variables
+### 2. Set Up Environment Variables
 
 Create a `.env` file in the root directory and add:
 
@@ -62,13 +62,13 @@ SEED_PHRASE="your 12-word seed phrase here"
 
 in /e2e folder you can find one example
 
-### 3️⃣ Install Playwright Browsers
+### 3. Install Playwright Browsers
 
 ```sh
 npx playwright install --with-deps
 ```
 
-## 🏃 Running Tests
+## Running Tests
 
 ### Run All Tests
 
@@ -82,10 +82,16 @@ npx cucumber-js
 npm run test
 ```
 
-## 🔄 CI/CD Integration
+## CI/CD Integration
 
 ### GitHub Actions Workflow
 
 This project includes a **GitHub Actions workflow** to run tests automatically.
 
 #### **📁 `.github/workflows/playwright.yml`**
+
+## Reporting
+
+### Allure Report
+
+This project generates allure results every time the CI automated tests are run on the **GitHub Actions workflow**. You can find them as artifacts attached in the pull request

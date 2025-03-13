@@ -22,7 +22,7 @@ This was probably one of the trickiest parts of the project. Automating MetaMask
 
 - Finding a **reliable and maintained solution** that worked with Cucumber.
 - **Synpress wasn’t compatible** with Cucumber v4, so I had to find an alternative.
-- **Dappwright seemed like the best choice**, but since it’s not widely documented, I had to dig through Discord channels and GitHub issues to get it working properly.
+- **Dappwright seemed like the best choice**, but since it’s not widely documented, I had to dig through Discord channels and GitHub issues to get it working properly. And even with this I did not have enough time to set it up correctly
 
 ## 4. Implementing Cucumber in a Clean and Scalable Way
 

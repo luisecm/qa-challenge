@@ -1,6 +1,7 @@
 import { When, Then } from "@cucumber/cucumber";
 import BalancePage from "../pages/balance.page";
 import { page, metamask, context } from "./shared.step";
+import { Page } from "@playwright/test";
 
 let balancePage: BalancePage;
 
@@ -13,13 +14,8 @@ When(/^the user accepts the transaction$/, async function () {
   await metamask.confirmTransaction();
 });
 
-When(/^the deposit button is visible$/, async function () {
-  balancePage = new BalancePage(page);
-  await balancePage.validateDepositButtonIsVisible();
-});
-
 When(
-  /^And the user enters the max amount of tokens in the amount field$/,
+  /^the user enter the max amount of tokens in the amount field$/,
   async function () {
     balancePage = new BalancePage(page);
     await balancePage.enterMaxAmoutnOfTokens();
@@ -89,6 +85,22 @@ When(/^the user approve the deposit$/, async function () {
   await metamaskPage.click('[data-testid="confirm-footer-button"]');
 });
 
+When(/^the user cancels the deposit$/, async function () {
+  await metamask.reject();
+});
+
+When(/^the user accept sending cap request$/, async () => {
+  await metamask.confirmTransaction();
+});
+
+When(/^the user switches back to the dApp page$/, async function () {
+  const application: Page | undefined = context
+    .pages()
+    .find((p) => p.url().includes("localhost"));
+
+  await application?.bringToFront();
+});
+
 Then(
   "the page shows the token balance {string}",
   async function (expectedBalance: string) {
@@ -97,12 +109,16 @@ Then(
   }
 );
 
-Then(/^the deposit input shows an error$/, async function () {
+Then("the deposit input shows an error {string}", async function (error) {
   balancePage = new BalancePage(page);
-  await balancePage.validateDepositErrorIsShown();
+  await balancePage.validateDepositErrorIsShown(error);
 });
 
-Then(/^the deposit button is not visible$/, async function () {
+Then("the deposit button is {string}", async function (visibility) {
   balancePage = new BalancePage(page);
-  await balancePage.validateDepositButtonIsNotVisible();
+  if (visibility === "visible") {
+    await balancePage.validateDepositButtonIsVisible();
+  } else if (visibility === "not visible") {
+    await balancePage.validateDepositButtonIsNotVisible();
+  }
 });
