@@ -89,3 +89,9 @@ npm run test
 This project includes a **GitHub Actions workflow** to run tests automatically.
 
 #### **📁 `.github/workflows/playwright.yml`**
+
+## Reporting
+
+### Allure Report
+
+This project generates an allure report every time the CI automated tests are generated on the **GitHub Actions workflow**. You can find the link to report posted automatically in a PR comment and published on a github pages site from repository
