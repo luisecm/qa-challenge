@@ -2,16 +2,13 @@
   "default": {
     "parallel": 1,
     "formatOptions": {
-      "snippetInterface": "async-await"
+      "snippetInterface": "async-await",
+      "resultsDir": "e2e/allure-results"
     },
     "paths": ["e2e/features/**/*.feature"],
     "require": ["e2e/steps/**/*.ts"],
     "requireModule": ["ts-node/register"],
     "dryRun": false,
-    "format": [
-      "progress-bar",
-      "html:e2e/test-results/cucumber-report.html",
-      "json:e2e/test-results/cucumber-report.json"
-    ]
+    "format": ["progress-bar", "allure-cucumberjs/reporter"]
   }
 }

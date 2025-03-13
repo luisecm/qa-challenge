@@ -24,8 +24,8 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: cucumber-report
-          path: ./e2e/test-results/cucumber-report.html
+          name: allure-results
+          path: ./e2e/allure-results/
           retention-days: 30
 
   publish-cucumber-report:
@@ -48,12 +48,32 @@ jobs:
       - name: Download Report
         uses: actions/download-artifact@v4
         with:
-          name: cucumber-report
-          path: public
+          name: allure-results
+          path: ./allure-results
 
-      - name: Deploy Cucumber HTML report to Github Pages
+      - name: Generate Allure Results
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+        with:
+          allure_results: ./allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_history: allure-history
+
+      - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
-        with:
+        env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: public
+          publish_branch: gh-pages
+          publish_dir: allure-history
+
+      - name: Comment PR with Allure test results
+        if: always() && github.event_name == 'pull_request'
+        uses: mshick/add-pr-comment@v2.8.2
+        with:
+          message: |
+            Automated tests execution is complete! You can find the Allure Test Report [here](https://luisecm.github.io/qa-challenge/${{ github.run_number }})
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
