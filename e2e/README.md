@@ -94,4 +94,4 @@ This project includes a **GitHub Actions workflow** to run tests automatically.
 
 ### Allure Report
 
-This project generates an allure report every time the CI automated tests are generated on the **GitHub Actions workflow**. You can find the link to report posted automatically in a PR comment and published on a github pages site from repository
+This project generates allure results every time the CI automated tests are run on the **GitHub Actions workflow**. You can find them as artifacts attached in the pull request
